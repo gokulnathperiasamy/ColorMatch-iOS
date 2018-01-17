@@ -10,6 +10,15 @@ import UIKit
 
 class BaseVC: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     func applyCornerRadius(view: UIView) {
         view.layer.cornerRadius = 2.0
     }
