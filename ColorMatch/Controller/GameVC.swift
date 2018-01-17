@@ -14,6 +14,8 @@ class GameVC: BaseVC {
     @IBOutlet weak var viewB: UIView!
     @IBOutlet weak var ctaNo: UIButton!
     @IBOutlet weak var ctaYes: UIButton!
+    @IBOutlet weak var viewTime: UIView!
+    @IBOutlet weak var viewScore: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,8 @@ class GameVC: BaseVC {
         applyCornerRadius(view: viewB)
         applyCornerRadius(view: ctaNo)
         applyCornerRadius(view: ctaYes)
+        applyCornerRadius(view: viewTime)
+        applyCornerRadius(view: viewScore)
     }
 
     override func didReceiveMemoryWarning() {
