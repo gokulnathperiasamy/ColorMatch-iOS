@@ -21,8 +21,9 @@ class GameVC: BaseVC {
     @IBOutlet weak var textTime: UILabel!
     @IBOutlet weak var textScore: UILabel!
     
+    var timer = Timer()
     var score: Int = 0
-    
+    var timeLimit = AppConstants.GAME_PLAY_TIME
     var qE: QuestionEntity = QuestionEntity()
     
     override func viewDidLoad() {
@@ -40,7 +41,7 @@ class GameVC: BaseVC {
         applyCornerRadius(view: viewTime)
         applyCornerRadius(view: viewScore)
         
-        resetScore()
+        resetScoreAndStartNewGame()
         getNewQuestion()
     }
 
@@ -75,23 +76,32 @@ class GameVC: BaseVC {
     
     func checkAnswer(isCorrectAnswer: Bool) {
         if (isCorrectAnswer) {
-            print("Correct!")
             updateScore();
-        } else {
-            print("Wrong!")
         }
         getNewQuestion()
     }
     
-    func resetScore() {
-        textTime.text = TextUtil.getFormattedTime(value: 0)
+    func resetScoreAndStartNewGame() {
+        textTime.text = "00:45 sec"
         textScore.text = TextUtil.getFormattedScore(value: 0)
+        timer = Timer()
         score = 0
+        timeLimit = AppConstants.GAME_PLAY_TIME
+        startTimer()
     }
     
     func updateScore() {
         score += TextUtil.getRandomInt(min: 79, max: 99)
         textScore.text = TextUtil.getFormattedScore(value: score)
+    }
+    
+    func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(self.updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer() {
+        timeLimit -= 1
+        textTime.text = "00:\(timeLimit) sec"
     }
 
 }

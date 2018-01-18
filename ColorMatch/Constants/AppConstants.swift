@@ -10,9 +10,8 @@ import Foundation
 
 class AppConstants {
     
-    public static let GAME_PLAY_TIME = 45 * 1000
-    public static let COUNT_DOWN_TIMER = 2
-    public static let MILLI_SECOND = 1000
+    public static let GAME_PLAY_TIME = 45
+    public static let COUNT_DOWN_TIMER = 4
     public static let FADE_OUT_DURATION = 500
     
     public static let COLOR_BLACK = "black"
