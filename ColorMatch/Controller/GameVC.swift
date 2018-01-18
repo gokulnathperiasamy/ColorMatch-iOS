@@ -43,7 +43,12 @@ class GameVC: BaseVC {
     }
     
     @IBAction func actionYes(_ sender: Any) {
-        
+        let qE = QuestionGenerator.getQuestion()
+        print(qE.textA)
+        print(qE.textAColor)
+        print(qE.textB)
+        print(qE.textBColor)
+        print(qE.isCorrect)
     }
     
     /*

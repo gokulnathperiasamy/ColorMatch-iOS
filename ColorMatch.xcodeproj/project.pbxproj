@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD11CA222010C76D00C8416A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD11CA212010C76D00C8416A /* AppConstants.swift */; };
+		AD11CA252010C81600C8416A /* TextUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD11CA242010C81600C8416A /* TextUtil.swift */; };
+		AD11CA272010CAAD00C8416A /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD11CA262010CAAD00C8416A /* ColorConstants.swift */; };
+		AD11CA2A2010CCB500C8416A /* QuestionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD11CA292010CCB500C8416A /* QuestionGenerator.swift */; };
+		AD11CA2C2010CCD900C8416A /* QuestionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD11CA2B2010CCD900C8416A /* QuestionEntity.swift */; };
 		AD6116CF200E41310052B1FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6116CE200E41310052B1FC /* AppDelegate.swift */; };
 		AD6116D1200E41310052B1FC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6116D0200E41310052B1FC /* MainVC.swift */; };
 		AD6116D4200E41310052B1FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6116D2200E41310052B1FC /* LaunchScreen.storyboard */; };
@@ -18,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD11CA212010C76D00C8416A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		AD11CA242010C81600C8416A /* TextUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextUtil.swift; sourceTree = "<group>"; };
+		AD11CA262010CAAD00C8416A /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
+		AD11CA292010CCB500C8416A /* QuestionGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGenerator.swift; sourceTree = "<group>"; };
+		AD11CA2B2010CCD900C8416A /* QuestionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionEntity.swift; sourceTree = "<group>"; };
 		AD6116CB200E41310052B1FC /* ColorMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6116CE200E41310052B1FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6116D0200E41310052B1FC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -41,6 +51,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD11CA232010C7FF00C8416A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AD11CA242010C81600C8416A /* TextUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AD11CA282010CC9800C8416A /* Processor */ = {
+			isa = PBXGroup;
+			children = (
+				AD11CA292010CCB500C8416A /* QuestionGenerator.swift */,
+			);
+			path = Processor;
+			sourceTree = "<group>";
+		};
 		AD6116C2200E41300052B1FC = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +91,8 @@
 				ADD1FC2F200E43C800308AA4 /* Model */,
 				ADD1FC2D200E434900308AA4 /* View */,
 				ADD1FC2C200E433800308AA4 /* Controller */,
+				AD11CA282010CC9800C8416A /* Processor */,
+				AD11CA232010C7FF00C8416A /* Util */,
 				AD6116D5200E41310052B1FC /* Assets.xcassets */,
 				AD6116DA200E41310052B1FC /* Info.plist */,
 			);
@@ -101,6 +129,7 @@
 		ADD1FC2F200E43C800308AA4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AD11CA2B2010CCD900C8416A /* QuestionEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				ADD1FC31200E440200308AA4 /* StringConstants.swift */,
+				AD11CA212010C76D00C8416A /* AppConstants.swift */,
+				AD11CA262010CAAD00C8416A /* ColorConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -186,9 +217,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD6116D1200E41310052B1FC /* MainVC.swift in Sources */,
+				AD11CA222010C76D00C8416A /* AppConstants.swift in Sources */,
+				AD11CA2A2010CCB500C8416A /* QuestionGenerator.swift in Sources */,
+				AD11CA252010C81600C8416A /* TextUtil.swift in Sources */,
+				AD11CA272010CAAD00C8416A /* ColorConstants.swift in Sources */,
 				AD6116CF200E41310052B1FC /* AppDelegate.swift in Sources */,
 				ADA80100200F17B80027D6A1 /* GameVC.swift in Sources */,
 				ADD1FC32200E440200308AA4 /* StringConstants.swift in Sources */,
+				AD11CA2C2010CCD900C8416A /* QuestionEntity.swift in Sources */,
 				ADA80102200F18AB0027D6A1 /* BaseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
