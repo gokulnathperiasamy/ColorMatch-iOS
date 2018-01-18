@@ -12,16 +12,8 @@ class StringConstants {
     
     /************************** Public Members ****************************/
     
-    public static let APP_NAME = StringConstants.getAppName()
+    public static let APP_NAME = "Color Match"
     public static let APP_VERSION = StringConstants.getAppVersion()
-    
-    public static let APP_DESCRIPTION = "Determine if the meaning matches the text color."
-    public static let GAME_DESCRIPTION = "Does the meaning match the text color?"
-    public static let BEST_SCORE = "Best Score"
-    public static let MAXIMUM_CARDS = "Maximum Cards"
-    
-    public static let CTA_PLAY_GAME = "Play Game"
-    
     public static let COPYRIGHT_MESSAGE = "Copyright © Color Match 2018. All rights reserved."
     
     /*********************** Private Getters/Setters **********************/
@@ -32,8 +24,5 @@ class StringConstants {
         }
         return "1.0.0"
     }
-    
-    private static func getAppName() -> String {
-        return "Color Match"
-    }
+
 }

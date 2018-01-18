@@ -28,9 +28,13 @@ class GameVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         initView()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     func initView() {
@@ -45,11 +49,6 @@ class GameVC: BaseVC {
         getNewQuestion()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     @IBAction func actionNo(_ sender: Any) {
         if (qE.isCorrect == false) {
             checkAnswer(isCorrectAnswer: true)
@@ -102,6 +101,16 @@ class GameVC: BaseVC {
     @objc func updateTimer() {
         timeLimit -= 1
         textTime.text = "00:\(timeLimit) sec"
+        if (timeLimit == 0) {
+            gameOver()
+        }
+    }
+    
+    func gameOver() {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "GameScreen", bundle:nil)
+        
+        let mainScreen = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainVC
+        self.present(mainScreen, animated:true, completion:nil)
     }
 
 }
