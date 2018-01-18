@@ -22,7 +22,7 @@ class StringConstants {
     
     public static let CTA_PLAY_GAME = "Play Game"
     
-    public static let COPYRIGHT_MESSAGE = "Copyright © Color Match 2017. All rights reserved."
+    public static let COPYRIGHT_MESSAGE = "Copyright © Color Match 2018. All rights reserved."
     
     /*********************** Private Getters/Setters **********************/
     

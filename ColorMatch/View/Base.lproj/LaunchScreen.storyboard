@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="4096" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,11 +21,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-Launcher" translatesAutoresizingMaskIntoConstraints="NO" id="WCm-kc-BrZ">
                                 <rect key="frame" x="143" y="304" width="128" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="HjR-pF-ACs"/>
-                                    <constraint firstAttribute="width" constant="128" id="gYo-in-iuy"/>
+                                    <constraint firstAttribute="width" constant="128" id="7Y3-hA-a5m"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="QAF-LI-vrp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="hGA-Jx-swV"/>
+                                    <constraint firstAttribute="height" constant="128" id="vR6-iv-v8L"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © Color Match 2017. All rights reserved." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7S-Bg-xIk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © Color Match 2018. All rights reserved." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7S-Bg-xIk">
                                 <rect key="frame" x="8" y="708" width="398" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Y5o-Gj-ISW"/>
@@ -49,9 +51,9 @@
                             <constraint firstAttribute="trailing" secondItem="5fa-eN-frm" secondAttribute="trailing" constant="8" id="3uQ-t8-rIf"/>
                             <constraint firstItem="H7S-Bg-xIk" firstAttribute="top" secondItem="5fa-eN-frm" secondAttribute="bottom" constant="8" id="5lA-Bo-dSa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H7S-Bg-xIk" secondAttribute="bottom" constant="8" id="LJN-cI-KO9"/>
+                            <constraint firstItem="WCm-kc-BrZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Tvd-Ej-s2K"/>
+                            <constraint firstItem="WCm-kc-BrZ" firstAttribute="centerX" secondItem="5fa-eN-frm" secondAttribute="centerX" id="Zz6-Ib-bpc"/>
                             <constraint firstItem="5fa-eN-frm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="fve-fc-h7g"/>
-                            <constraint firstItem="WCm-kc-BrZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="h5B-0M-a3d"/>
-                            <constraint firstItem="WCm-kc-BrZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m8U-Bh-04d"/>
                             <constraint firstItem="H7S-Bg-xIk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="o3m-v7-NRQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H7S-Bg-xIk" secondAttribute="trailing" constant="8" id="vXj-Ut-aBs"/>
                         </constraints>
