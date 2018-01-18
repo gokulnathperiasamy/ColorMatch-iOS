@@ -18,6 +18,10 @@ class GameVC: BaseVC {
     @IBOutlet weak var viewScore: UIView!
     @IBOutlet weak var textA: UILabel!
     @IBOutlet weak var textB: UILabel!
+    @IBOutlet weak var textTime: UILabel!
+    @IBOutlet weak var textScore: UILabel!
+    
+    var score: Int = 0
     
     var qE: QuestionEntity = QuestionEntity()
     
@@ -36,6 +40,7 @@ class GameVC: BaseVC {
         applyCornerRadius(view: viewTime)
         applyCornerRadius(view: viewScore)
         
+        resetScore()
         getNewQuestion()
     }
 
@@ -71,10 +76,22 @@ class GameVC: BaseVC {
     func checkAnswer(isCorrectAnswer: Bool) {
         if (isCorrectAnswer) {
             print("Correct!")
+            updateScore();
         } else {
             print("Wrong!")
         }
         getNewQuestion()
+    }
+    
+    func resetScore() {
+        textTime.text = TextUtil.getFormattedTime(value: 0)
+        textScore.text = TextUtil.getFormattedScore(value: 0)
+        score = 0
+    }
+    
+    func updateScore() {
+        score += TextUtil.getRandomInt(min: 79, max: 99)
+        textScore.text = TextUtil.getFormattedScore(value: score)
     }
 
 }

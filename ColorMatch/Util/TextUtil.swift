@@ -11,12 +11,18 @@ import UIKit
 
 class TextUtil {
     
-    static func getFormattedScore(doubleValue: Double) -> String {
-        return String(format: "%06d", doubleValue);
+    static func getFormattedScore(value: Int) -> String {
+        let returnString = String(value)
+        let toPad = 6 - returnString.count
+        if (toPad < 1) {
+            return returnString
+        } else {
+            return "".padding(toLength: toPad, withPad: "0", startingAt: 0) + String(value)
+        }
     }
     
-    static func getFormattedTime(doubleValue: Double) -> String {
-        return String(format: "%02d", doubleValue);
+    static func getFormattedTime(value: Int) -> String {
+        return String(format: "%02d", value);
     }
     
     static func getRandomInt(min: Int, max: Int) -> Int {

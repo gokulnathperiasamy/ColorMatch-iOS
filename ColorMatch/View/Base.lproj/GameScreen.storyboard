@@ -185,7 +185,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © Color Match 2017. All rights reserved." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rga-ZB-842">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © Color Match 2018. All rights reserved." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rga-ZB-842">
                                 <rect key="frame" x="8" y="708" width="398" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="76D-Iz-cEy"/>
@@ -477,6 +477,8 @@
                         <outlet property="ctaYes" destination="RTw-YP-mrO" id="mrh-th-IYX"/>
                         <outlet property="textA" destination="wiS-fg-z5Y" id="H5s-Vj-hbV"/>
                         <outlet property="textB" destination="cdx-bC-0gc" id="GcC-Nt-Xo1"/>
+                        <outlet property="textScore" destination="ctj-Oo-4bO" id="Mpd-0X-eEl"/>
+                        <outlet property="textTime" destination="JXE-ej-HPX" id="LEt-Qs-mPZ"/>
                         <outlet property="viewA" destination="XV1-ce-QdI" id="llx-Cy-z83"/>
                         <outlet property="viewB" destination="3vZ-Im-xMn" id="UIK-Og-IAW"/>
                         <outlet property="viewScore" destination="jw8-CB-mZw" id="7Ly-U4-V7B"/>
