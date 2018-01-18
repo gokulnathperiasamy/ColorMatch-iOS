@@ -16,6 +16,10 @@ class GameVC: BaseVC {
     @IBOutlet weak var ctaYes: UIButton!
     @IBOutlet weak var viewTime: UIView!
     @IBOutlet weak var viewScore: UIView!
+    @IBOutlet weak var textA: UILabel!
+    @IBOutlet weak var textB: UILabel!
+    
+    var qE: QuestionEntity = QuestionEntity()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +35,8 @@ class GameVC: BaseVC {
         applyCornerRadius(view: ctaYes)
         applyCornerRadius(view: viewTime)
         applyCornerRadius(view: viewScore)
+        
+        getNewQuestion()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,26 +45,36 @@ class GameVC: BaseVC {
     }
     
     @IBAction func actionNo(_ sender: Any) {
-        
+        if (qE.isCorrect == false) {
+            checkAnswer(isCorrectAnswer: true)
+        } else {
+            checkAnswer(isCorrectAnswer: false)
+        }
     }
     
     @IBAction func actionYes(_ sender: Any) {
-        let qE = QuestionGenerator.getQuestion()
-        print(qE.textA)
-        print(qE.textAColor)
-        print(qE.textB)
-        print(qE.textBColor)
-        print(qE.isCorrect)
+        if (qE.isCorrect == true) {
+            checkAnswer(isCorrectAnswer: true)
+        } else {
+            checkAnswer(isCorrectAnswer: false)
+        }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func getNewQuestion() {
+        qE = QuestionGenerator.getQuestion()
+        textA.text = qE.textA
+        textA.textColor = TextUtil.getUIColor(textColor: qE.textAColor)
+        textB.text = qE.textB
+        textB.textColor = TextUtil.getUIColor(textColor: qE.textBColor)
     }
-    */
+    
+    func checkAnswer(isCorrectAnswer: Bool) {
+        if (isCorrectAnswer) {
+            print("Correct!")
+        } else {
+            print("Wrong!")
+        }
+        getNewQuestion()
+    }
 
 }
