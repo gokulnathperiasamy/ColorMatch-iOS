@@ -247,6 +247,8 @@
                     </view>
                     <connections>
                         <outlet property="ctaPlayGame" destination="lZT-1u-b8u" id="5eR-7z-hpS"/>
+                        <outlet property="textMaxCards" destination="VZi-FQ-NVZ" id="njx-Ap-Nn5"/>
+                        <outlet property="textMaxScore" destination="Wbd-np-0R9" id="Iad-h7-NJK"/>
                         <outlet property="viewA" destination="BQp-f3-mzp" id="rnA-Qs-ZZW"/>
                         <outlet property="viewB" destination="Nj9-2v-JNh" id="qv5-HM-A75"/>
                     </connections>

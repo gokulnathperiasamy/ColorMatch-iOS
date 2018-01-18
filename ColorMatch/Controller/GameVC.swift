@@ -23,10 +23,11 @@ class GameVC: BaseVC {
     
     var timer = Timer()
     var score: Int = 0
+    var totalCorrectCards: Int = 0
+    var continiousCorrectCards = 0
     var timeLimit = AppConstants.GAME_PLAY_TIME
     var qE: QuestionEntity = QuestionEntity()
-    var continiousCorrectAnswer = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,10 +77,11 @@ class GameVC: BaseVC {
     
     func checkAnswer(isCorrectAnswer: Bool) {
         if (isCorrectAnswer) {
-            continiousCorrectAnswer += 1
+            continiousCorrectCards += 1
+            totalCorrectCards += 1
             updateScore();
         } else {
-            continiousCorrectAnswer = 0
+            continiousCorrectCards = 0
         }
         getNewQuestion()
     }
@@ -89,15 +91,16 @@ class GameVC: BaseVC {
         textScore.text = TextUtil.getFormattedScore(value: 0)
         timer = Timer()
         score = 0
+        totalCorrectCards = 0
+        continiousCorrectCards = 0
         timeLimit = AppConstants.GAME_PLAY_TIME
-        continiousCorrectAnswer = 0
         startTimer()
     }
     
     func updateScore() {
         score += TextUtil.getRandomInt(min: 79, max: 99)
-        if (continiousCorrectAnswer != 0 && continiousCorrectAnswer % AppConstants.BONUS_SPLIT == 0) {
-            score += (continiousCorrectAnswer / AppConstants.BONUS_SPLIT) * TextUtil.getRandomInt(min: 501, max: 599)
+        if (continiousCorrectCards != 0 && continiousCorrectCards % AppConstants.BONUS_SPLIT == 0) {
+            score += (continiousCorrectCards / AppConstants.BONUS_SPLIT) * TextUtil.getRandomInt(min: 501, max: 599)
         }
         textScore.text = TextUtil.getFormattedScore(value: score)
     }
@@ -110,15 +113,21 @@ class GameVC: BaseVC {
         timeLimit -= 1
         textTime.text = "00:\(timeLimit) sec"
         if (timeLimit == 0) {
+            timer.invalidate()
             gameOver()
         }
     }
     
     func gameOver() {
+        saveScore()
         let storyBoard : UIStoryboard = UIStoryboard(name: "GameScreen", bundle:nil)
         
         let mainScreen = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainVC
         self.present(mainScreen, animated:true, completion:nil)
     }
 
+    func saveScore() {
+        ScoreUtil.updateScoreAndCards(score: score, cards: totalCorrectCards)
+    }
+    
 }

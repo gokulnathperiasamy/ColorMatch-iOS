@@ -12,6 +12,7 @@
 		AD11CA272010CAAD00C8416A /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD11CA262010CAAD00C8416A /* ColorConstants.swift */; };
 		AD11CA2A2010CCB500C8416A /* QuestionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD11CA292010CCB500C8416A /* QuestionGenerator.swift */; };
 		AD11CA2C2010CCD900C8416A /* QuestionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD11CA2B2010CCD900C8416A /* QuestionEntity.swift */; };
+		AD11CA2E2010F67400C8416A /* ScoreUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD11CA2D2010F67400C8416A /* ScoreUtil.swift */; };
 		AD6116CF200E41310052B1FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6116CE200E41310052B1FC /* AppDelegate.swift */; };
 		AD6116D1200E41310052B1FC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6116D0200E41310052B1FC /* MainVC.swift */; };
 		AD6116D4200E41310052B1FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6116D2200E41310052B1FC /* LaunchScreen.storyboard */; };
@@ -28,6 +29,7 @@
 		AD11CA262010CAAD00C8416A /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		AD11CA292010CCB500C8416A /* QuestionGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGenerator.swift; sourceTree = "<group>"; };
 		AD11CA2B2010CCD900C8416A /* QuestionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionEntity.swift; sourceTree = "<group>"; };
+		AD11CA2D2010F67400C8416A /* ScoreUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreUtil.swift; sourceTree = "<group>"; };
 		AD6116CB200E41310052B1FC /* ColorMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6116CE200E41310052B1FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6116D0200E41310052B1FC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				AD11CA242010C81600C8416A /* TextUtil.swift */,
+				AD11CA2D2010F67400C8416A /* ScoreUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				ADA80100200F17B80027D6A1 /* GameVC.swift in Sources */,
 				ADD1FC32200E440200308AA4 /* StringConstants.swift in Sources */,
 				AD11CA2C2010CCD900C8416A /* QuestionEntity.swift in Sources */,
+				AD11CA2E2010F67400C8416A /* ScoreUtil.swift in Sources */,
 				ADA80102200F18AB0027D6A1 /* BaseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

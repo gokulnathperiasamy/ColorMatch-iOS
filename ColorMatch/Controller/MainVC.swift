@@ -13,6 +13,8 @@ class MainVC: BaseVC {
     @IBOutlet weak var viewA: UIView!
     @IBOutlet weak var viewB: UIView!
     @IBOutlet weak var ctaPlayGame: UIButton!
+    @IBOutlet weak var textMaxScore: UILabel!
+    @IBOutlet weak var textMaxCards: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,13 @@ class MainVC: BaseVC {
         applyCornerRadius(view: viewA)
         applyCornerRadius(view: viewB)
         applyCornerRadius(view: ctaPlayGame)
+        
+        loadData()
+    }
+    
+    func loadData() {
+        textMaxScore.text = ScoreUtil.getMaxScore()
+        textMaxCards.text = ScoreUtil.getMaxCards()
     }
 
     override func didReceiveMemoryWarning() {
