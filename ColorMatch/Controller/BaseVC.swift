@@ -10,9 +10,10 @@ import UIKit
 
 class BaseVC: UIViewController {
     
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

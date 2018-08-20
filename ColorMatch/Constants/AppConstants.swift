@@ -12,7 +12,7 @@ class AppConstants {
     
     public static let GAME_PLAY_TIME = 45
     public static let COUNT_DOWN_TIMER = 4
-    public static let FADE_OUT_DURATION = 500
+    public static let COUNT_DOWN_TIMER_START_GAME = 1
     
     public static let COLOR_BLACK = "black"
     public static let COLOR_YELLOW = "yellow"

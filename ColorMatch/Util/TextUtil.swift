@@ -21,6 +21,10 @@ class TextUtil {
         }
     }
     
+    static func getFormattedTime(value: Int) -> String {
+        return String(format: "%02d", value)
+    }
+    
     static func getRandomInt(min: Int, max: Int) -> Int {
         return min + Int(arc4random_uniform(UInt32(max - min + 1)))
     }
