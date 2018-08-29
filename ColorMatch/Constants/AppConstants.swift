@@ -10,7 +10,7 @@ import Foundation
 
 class AppConstants {
     
-    public static let GAME_PLAY_TIME = 45
+    public static let GAME_PLAY_TIME = 60
     public static let COUNT_DOWN_TIMER = 4
     public static let COUNT_DOWN_TIMER_START_GAME = 1
     

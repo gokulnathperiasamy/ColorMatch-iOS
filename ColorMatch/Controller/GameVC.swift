@@ -107,7 +107,7 @@ class GameVC: BaseVC {
     }
     
     func resetScoreAndStartNewGame() {
-        textTime.text = "00:45 sec"
+        textTime.text = "00:\(TextUtil.getFormattedTime(value: timeLimit)) sec"
         textScore.text = TextUtil.getFormattedScore(value: 0)
         score = 0
         totalCorrectCards = 0

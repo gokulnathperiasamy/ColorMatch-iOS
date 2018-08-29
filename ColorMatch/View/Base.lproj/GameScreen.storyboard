@@ -410,7 +410,7 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:45 sec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXE-ej-HPX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:60 sec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXE-ej-HPX">
                                         <rect key="frame" x="59" y="6.0000000000000009" width="91" height="14.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                         <color key="textColor" red="0.13725490200000001" green="0.43921568630000002" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -533,6 +533,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_correct" width="64" height="64"/>
+        <image name="ic_correct" width="85" height="85"/>
     </resources>
 </document>
