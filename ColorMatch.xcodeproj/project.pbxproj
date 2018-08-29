@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2086DDE2136AD82005F92A7 /* Pods_ColorMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6739111B4BCE0A880646F60 /* Pods_ColorMatch.framework */; };
+		A2086DDF2136AD82005F92A7 /* Pods_ColorMatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6739111B4BCE0A880646F60 /* Pods_ColorMatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2A4DD34212AB25200550EB2 /* AnimationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A4DD33212AB25200550EB2 /* AnimationUtil.swift */; };
+		A2FECC732136AC7000B8D8DF /* Pods_ColorMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6739111B4BCE0A880646F60 /* Pods_ColorMatch.framework */; };
 		AD11CA222010C76D00C8416A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD11CA212010C76D00C8416A /* AppConstants.swift */; };
 		AD11CA252010C81600C8416A /* TextUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD11CA242010C81600C8416A /* TextUtil.swift */; };
 		AD11CA272010CAAD00C8416A /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD11CA262010CAAD00C8416A /* ColorConstants.swift */; };
@@ -23,8 +26,21 @@
 		ADA80102200F18AB0027D6A1 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA80101200F18AB0027D6A1 /* BaseVC.swift */; };
 		ADD1FC32200E440200308AA4 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1FC31200E440200308AA4 /* StringConstants.swift */; };
 		ADFCBCB82011B158008451FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADFCBCB72011B158008451FE /* GoogleService-Info.plist */; };
-		C06AAB5A721705BD12A35733 /* Pods_ColorMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6739111B4BCE0A880646F60 /* Pods_ColorMatch.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2086DE02136AD82005F92A7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2086DDF2136AD82005F92A7 /* Pods_ColorMatch.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1BC9EBAD51717E9D159E6C2D /* Pods-ColorMatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorMatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ColorMatch/Pods-ColorMatch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -55,7 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C06AAB5A721705BD12A35733 /* Pods_ColorMatch.framework in Frameworks */,
+				A2086DDE2136AD82005F92A7 /* Pods_ColorMatch.framework in Frameworks */,
+				A2FECC732136AC7000B8D8DF /* Pods_ColorMatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +207,7 @@
 				AD6116C9200E41300052B1FC /* Resources */,
 				411251F574090D09E5850754 /* [CP] Embed Pods Frameworks */,
 				A67680521471CB5A1092E3FC /* [CP] Copy Pods Resources */,
+				A2086DE02136AD82005F92A7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
