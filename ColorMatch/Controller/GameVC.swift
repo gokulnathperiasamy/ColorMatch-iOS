@@ -99,10 +99,10 @@ class GameVC: BaseVC {
         scoreValue.isHidden = false
         if (isCorrectAnswer) {
             imageResult.image = UIImage(named: "ic_correct")
+            AnimationUtil.animateView(view: self.imageResult)
         } else {
             imageResult.image = UIImage(named: "ic_wrong")
         }
-        AnimationUtil.animateView(view: self.imageResult)
         AnimationUtil.animateView(view: self.scoreValue)
     }
     
